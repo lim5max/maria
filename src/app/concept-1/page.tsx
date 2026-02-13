@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDownRight, Scale, Shield, Globe, TrendingUp, Users, FileText, Briefcase, Award, Copyright } from 'lucide-react';
+import { ArrowDownRight, Scale, Shield, Globe, TrendingUp, Users, FileText, Briefcase, Award, Copyright, Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 
 const HandshakeIcon = () => (
   <svg
@@ -31,23 +31,33 @@ const ServiceCard = ({ item, index }: { item: { title: string; icon: React.React
       className="group relative border-b border-r border-[#222] p-10 hover:bg-[#141414] transition-colors duration-500 flex flex-col h-64 justify-between"
     >
       <div className="flex justify-between items-start">
-        <span className="font-sans-custom text-xs text-stone-600">0{index + 1}</span>
-        <div className="text-stone-500 group-hover:text-[#D4AF37] transition-colors duration-300">
+        <span className="font-sans-custom text-xs text-stone-600 font-light">0{index + 1}</span>
+        <div className="text-stone-600 group-hover:text-[#D4AF37] transition-colors duration-300">
            {item.icon}
         </div>
       </div>
 
       <div>
-        <h4 className="font-serif-custom text-xl lg:text-2xl text-stone-200 font-light group-hover:text-white transition-colors duration-300">
+        <h4 className="font-serif-custom text-xl lg:text-2xl text-stone-300 font-light group-hover:text-white transition-colors duration-300 pr-4">
           {item.title}
         </h4>
-        <div className="w-0 group-hover:w-12 h-[1px] bg-[#D4AF37] mt-4 transition-all duration-500 ease-out"></div>
+        <div className="w-0 group-hover:w-12 h-[1px] bg-[#D4AF37] mt-6 transition-all duration-500 ease-out"></div>
       </div>
     </motion.div>
   );
 };
 
 export default function Concept1() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   const services = [
     { title: "Слияния и поглощения (М&A)", icon: <Users size={20} /> },
     { title: "Купля-продажа бизнеса", icon: <Briefcase size={20} /> },
@@ -62,114 +72,150 @@ export default function Concept1() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-stone-100 selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-[#0a0a0a] text-stone-100 selection:bg-[#D4AF37] selection:text-black overflow-x-hidden font-sans-custom">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
         .font-serif-custom { font-family: 'Playfair Display', serif; }
         .font-sans-custom { font-family: 'Manrope', sans-serif; }
-
-        .grid-lines {
-          background-image: linear-gradient(to right, #222 1px, transparent 1px),
-                            linear-gradient(to bottom, #222 1px, transparent 1px);
-          background-size: 100px 100px;
-          opacity: 0.3;
-        }
 
         .writing-vertical-lr {
           writing-mode: vertical-lr;
         }
       `}</style>
 
-      <div className="fixed inset-0 grid-lines pointer-events-none z-0" />
-
       <main className="relative z-10 max-w-[1600px] mx-auto border-l border-r border-[#222]">
 
         {/* --- BLOCK 1: HERO & BIO --- */}
         <section className="relative grid grid-cols-1 lg:grid-cols-12 min-h-screen border-b border-[#222]">
 
-          <div className="hidden lg:flex col-span-1 border-r border-[#222] items-center justify-center py-10">
-            <span className="writing-vertical-lr rotate-180 text-[#D4AF37] tracking-[0.3em] text-xs font-sans-custom uppercase opacity-80">
-              Miraligal Law Firm
+          {/* Brand Vertical Text (Desktop) - Left Sidebar */}
+          <div className="hidden lg:flex col-span-1 border-r border-[#222] items-center justify-center py-10 sticky top-0 h-screen">
+            <span className="writing-vertical-lr rotate-180 text-[#D4AF37] tracking-[0.3em] text-[10px] font-sans-custom uppercase opacity-80">
+              Miraligal
             </span>
           </div>
 
-          <div className="col-span-1 lg:col-span-6 flex flex-col justify-between p-8 lg:p-16 relative">
+          {/* Center Content */}
+          <div className="col-span-1 lg:col-span-6 flex flex-col relative">
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-[1px] w-12 bg-[#D4AF37]"></div>
-                <span className="text-[#D4AF37] uppercase tracking-[0.2em] text-xs font-sans-custom">
-                  Москва
-                </span>
-              </div>
+            {/* Top Navigation Bar */}
+            <header className="flex justify-between items-center p-8 lg:px-16 lg:py-10 border-b border-[#222] lg:border-none">
+               <div className="flex items-center gap-4">
+                  <span className="text-[#D4AF37] uppercase tracking-[0.2em] text-[10px] font-sans-custom">
+                    Москва
+                  </span>
+               </div>
 
-              <h1 className="font-serif-custom text-4xl lg:text-6xl leading-[1.1] mb-6 text-white font-light">
-                Юридическая практика <br/>
-                <span className="italic text-stone-400">адвоката</span> Марии Мирошниковой
-              </h1>
+               {/* Desktop Menu */}
+               <nav className="hidden lg:flex gap-8">
+                 {['Услуги', 'О нас', 'Контакты'].map((item) => (
+                   <button
+                     key={item}
+                     onClick={() => scrollToSection(item === 'Услуги' ? 'services' : 'footer')}
+                     className="text-xs uppercase tracking-widest text-stone-400 hover:text-[#D4AF37] transition-colors duration-300"
+                   >
+                     {item}
+                   </button>
+                 ))}
+               </nav>
 
-              <h2 className="font-sans-custom text-sm tracking-[0.4em] text-[#D4AF37] uppercase mb-12">
-                Миралигал
-              </h2>
-            </motion.div>
+               {/* Mobile Menu Icon */}
+               <button className="lg:hidden text-stone-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+               </button>
+            </header>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="mt-auto max-w-md"
-            >
-              <p className="font-sans-custom font-light text-stone-300 text-lg leading-relaxed mb-8">
-                Мария — ваш надежный юридический советник с опытом более <span className="text-white border-b border-[#D4AF37]">25 лет</span>.
-              </p>
-              <p className="font-sans-custom text-sm text-stone-400 leading-relaxed mb-6 pl-4 border-l border-[#333]">
-                Специализация: создание и развитие бизнеса, инвестиции, покупка и продажа активов, управление личным благосостоянием.
-              </p>
-              <p className="font-sans-custom text-sm text-stone-400 italic">
-                «Мы находим оптимальное решение в нестандартной ситуации, опираясь на лучшие юридические практики.»
-              </p>
-            </motion.div>
+            {/* Mobile Menu Overlay */}
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="absolute top-20 left-0 right-0 bg-[#0f0f0f] border-b border-[#222] z-50 p-8 flex flex-col gap-6 lg:hidden"
+              >
+                 {['Услуги', 'О нас', 'Контакты'].map((item) => (
+                   <button
+                     key={item}
+                     onClick={() => scrollToSection(item === 'Услуги' ? 'services' : 'footer')}
+                     className="text-left text-sm uppercase tracking-widest text-stone-300"
+                   >
+                     {item}
+                   </button>
+                 ))}
+              </motion.div>
+            )}
+
+            {/* Hero Content */}
+            <div className="flex-grow flex flex-col justify-center p-8 lg:p-16 lg:pt-0">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="font-serif-custom text-4xl lg:text-6xl leading-[1.1] mb-8 text-white font-light">
+                  Юридическая практика <br/>
+                  <span className="italic text-stone-400">адвоката</span> Марии Мирошниковой
+                </h1>
+
+                <h2 className="font-sans-custom text-[10px] tracking-[0.4em] text-[#D4AF37] uppercase mb-16">
+                  Миралигал
+                </h2>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                className="mt-auto max-w-lg"
+              >
+                <p className="font-sans-custom font-light text-stone-300 text-lg leading-relaxed mb-8">
+                  Мария — ваш надежный юридический советник с опытом более <span className="text-white border-b border-[#D4AF37]">25 лет</span>.
+                </p>
+                <div className="flex flex-col gap-4 pl-4 border-l border-[#333]">
+                  <p className="font-sans-custom text-sm text-stone-400 leading-relaxed">
+                    Специализация: создание и развитие бизнеса, инвестиции, покупка и продажа активов, управление личным благосостоянием.
+                  </p>
+                  <p className="font-sans-custom text-sm text-stone-500 italic">
+                    «Мы находим оптимальное решение в нестандартной ситуации, опираясь на лучшие юридические практики.»
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
 
+          {/* Photo Section - Right Sidebar */}
           <div className="col-span-1 lg:col-span-5 relative h-[50vh] lg:h-auto border-l border-[#222] overflow-hidden group">
-            <div className="absolute inset-0 bg-[#0a0a0a] opacity-20 group-hover:opacity-0 transition-opacity duration-700 z-10 mix-blend-multiply"></div>
-
             <motion.img
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop&grayscale"
+              src="/maria.jpg"
               alt="Мария Мирошникова"
-              className="w-full h-full object-cover filter grayscale contrast-125"
+              className="w-full h-full object-cover"
             />
 
-            <div className="absolute bottom-0 right-0 p-8 z-20 bg-[#0a0a0a]">
+            <div className="absolute bottom-0 right-0 p-8 z-20 bg-[#0a0a0a] border-t border-l border-[#222]">
               <ArrowDownRight className="text-[#D4AF37]" size={32} />
             </div>
           </div>
         </section>
 
         {/* --- BLOCK 2: SERVICES --- */}
-        <section className="relative min-h-screen bg-[#0f0f0f]">
+        <section id="services" className="relative bg-[#0f0f0f]">
           <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-[#222]">
             <div className="hidden lg:block col-span-1 border-r border-[#222]"></div>
             <div className="col-span-11 p-8 lg:p-12 flex flex-col lg:flex-row lg:items-center justify-between">
                <h3 className="font-serif-custom text-3xl lg:text-4xl text-white font-light">
                  Области практики
                </h3>
-               <span className="font-sans-custom text-xs tracking-[0.3em] text-[#D4AF37] uppercase mt-4 lg:mt-0">
+               <span className="font-sans-custom text-[10px] tracking-[0.3em] text-[#D4AF37] uppercase mt-4 lg:mt-0">
                  Миралигал
                </span>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
-            <div className="hidden lg:block lg:col-span-1 border-r border-[#222] min-h-full"></div>
+            <div className="hidden lg:block lg:col-span-1 border-r border-[#222] min-h-full bg-[#0a0a0a]"></div>
             <div className="col-span-1 md:col-span-2 lg:col-span-11 grid grid-cols-1 md:grid-cols-2">
               {services.map((item, index) => (
                 <ServiceCard key={index} index={index} item={item} />
@@ -177,10 +223,40 @@ export default function Concept1() {
             </div>
           </div>
 
-          <footer className="border-t border-[#222] py-8 text-center">
-             <p className="font-sans-custom text-xs text-stone-600 uppercase tracking-widest">
-               &copy; {new Date().getFullYear()} Miraligal. All rights reserved.
-             </p>
+          {/* Footer / Contacts */}
+          <footer id="footer" className="grid grid-cols-1 lg:grid-cols-12 border-t border-[#222] bg-[#0a0a0a]">
+             <div className="hidden lg:block col-span-1 border-r border-[#222]"></div>
+
+             <div className="col-span-11 grid grid-cols-1 md:grid-cols-3">
+                <div className="p-10 border-b md:border-b-0 md:border-r border-[#222]">
+                  <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Адрес</h4>
+                  <div className="flex gap-4 items-start text-stone-300">
+                    <MapPin size={18} className="text-[#D4AF37] shrink-0 mt-1" />
+                    <p className="font-light">Москва, Пресненская наб., 12<br/>Башня Федерация</p>
+                  </div>
+                </div>
+
+                <div className="p-10 border-b md:border-b-0 md:border-r border-[#222]">
+                   <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Связь</h4>
+                   <div className="flex flex-col gap-4">
+                     <a href="tel:+74950000000" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
+                        <Phone size={18} className="text-[#D4AF37]" />
+                        <span>+7 (495) 000-00-00</span>
+                     </a>
+                     <a href="mailto:info@miraligal.ru" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
+                        <Mail size={18} className="text-[#D4AF37]" />
+                        <span>info@miraligal.ru</span>
+                     </a>
+                   </div>
+                </div>
+
+                <div className="p-10 flex flex-col justify-between">
+                   <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Miraligal</h4>
+                   <p className="font-sans-custom text-[10px] text-stone-600 uppercase tracking-widest">
+                     &copy; {new Date().getFullYear()} All rights reserved.
+                   </p>
+                </div>
+             </div>
           </footer>
         </section>
 
