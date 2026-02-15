@@ -32,7 +32,7 @@ const ServiceCard = ({ item, index }: { item: { title: string; icon: React.React
     >
       <div className="flex justify-between items-start">
         <span className="font-sans-custom text-xs text-stone-600 font-light">0{index + 1}</span>
-        <div className="text-stone-600 group-hover:text-[#D4AF37] transition-colors duration-300">
+        <div className="text-stone-600 group-hover:text-[#C15950] transition-colors duration-300">
            {item.icon}
         </div>
       </div>
@@ -41,7 +41,7 @@ const ServiceCard = ({ item, index }: { item: { title: string; icon: React.React
         <h4 className="font-serif-custom text-xl lg:text-2xl text-stone-300 font-light group-hover:text-white transition-colors duration-300 pr-4">
           {item.title}
         </h4>
-        <div className="w-0 group-hover:w-12 h-[1px] bg-[#D4AF37] mt-6 transition-all duration-500 ease-out"></div>
+        <div className="w-0 group-hover:w-12 h-[1px] bg-[#C15950] mt-6 transition-all duration-500 ease-out"></div>
       </div>
     </motion.div>
   );
@@ -72,7 +72,7 @@ export default function Concept1() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-stone-100 selection:bg-[#D4AF37] selection:text-black overflow-x-hidden font-sans-custom">
+    <div className="min-h-screen bg-[#0a0a0a] text-stone-100 selection:bg-[#C15950] selection:text-black overflow-x-hidden font-sans-custom">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
@@ -91,7 +91,7 @@ export default function Concept1() {
 
           {/* Brand Vertical Text (Desktop) - Left Sidebar */}
           <div className="hidden lg:flex col-span-1 border-r border-[#222] items-center justify-center py-10 sticky top-0 h-screen">
-            <span className="writing-vertical-lr rotate-180 text-[#D4AF37] tracking-[0.3em] text-[10px] font-sans-custom uppercase opacity-80">
+            <span className="writing-vertical-lr rotate-180 text-[#C15950] tracking-[0.3em] text-[10px] font-sans-custom uppercase opacity-80">
               Miraligal
             </span>
           </div>
@@ -102,7 +102,7 @@ export default function Concept1() {
             {/* Top Navigation Bar */}
             <header className="flex justify-between items-center p-8 lg:px-16 lg:py-10 border-b border-[#222] lg:border-none">
                <div className="flex items-center gap-4">
-                  <span className="text-[#D4AF37] uppercase tracking-[0.2em] text-[10px] font-sans-custom">
+                  <span className="text-[#C15950] uppercase tracking-[0.2em] text-[10px] font-sans-custom">
                     Москва
                   </span>
                </div>
@@ -113,7 +113,7 @@ export default function Concept1() {
                    <button
                      key={item}
                      onClick={() => scrollToSection(item === 'Услуги' ? 'services' : 'footer')}
-                     className="text-xs uppercase tracking-widest text-stone-400 hover:text-[#D4AF37] transition-colors duration-300"
+                     className="text-xs uppercase tracking-widest text-stone-400 hover:text-[#C15950] transition-colors duration-300"
                    >
                      {item}
                    </button>
@@ -157,7 +157,7 @@ export default function Concept1() {
                   <span className="italic text-stone-400">адвоката</span> Марии Мирошниковой
                 </h1>
 
-                <h2 className="font-sans-custom text-[10px] tracking-[0.4em] text-[#D4AF37] uppercase mb-16">
+                <h2 className="font-sans-custom text-[10px] tracking-[0.4em] text-[#C15950] uppercase mb-16">
                   Миралигал
                 </h2>
               </motion.div>
@@ -169,7 +169,7 @@ export default function Concept1() {
                 className="mt-auto max-w-lg"
               >
                 <p className="font-sans-custom font-light text-stone-300 text-lg leading-relaxed mb-8">
-                  Мария — ваш надежный юридический советник с опытом более <span className="text-white border-b border-[#D4AF37]">25 лет</span>.
+                  Мария — ваш надежный юридический советник с опытом более <span className="text-white border-b border-[#C15950]">25 лет</span>.
                 </p>
                 <div className="flex flex-col gap-4 pl-4 border-l border-[#333]">
                   <p className="font-sans-custom text-sm text-stone-400 leading-relaxed">
@@ -195,7 +195,7 @@ export default function Concept1() {
             />
 
             <div className="absolute bottom-0 right-0 p-8 z-20 bg-[#0a0a0a] border-t border-l border-[#222]">
-              <ArrowDownRight className="text-[#D4AF37]" size={32} />
+              <ArrowDownRight className="text-[#C15950]" size={32} />
             </div>
           </div>
         </section>
@@ -208,7 +208,7 @@ export default function Concept1() {
                <h3 className="font-serif-custom text-3xl lg:text-4xl text-white font-light">
                  Области практики
                </h3>
-               <span className="font-sans-custom text-[10px] tracking-[0.3em] text-[#D4AF37] uppercase mt-4 lg:mt-0">
+               <span className="font-sans-custom text-[10px] tracking-[0.3em] text-[#C15950] uppercase mt-4 lg:mt-0">
                  Миралигал
                </span>
             </div>
@@ -231,7 +231,7 @@ export default function Concept1() {
                 <div className="p-10 border-b md:border-b-0 md:border-r border-[#222]">
                   <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Адрес</h4>
                   <div className="flex gap-4 items-start text-stone-300">
-                    <MapPin size={18} className="text-[#D4AF37] shrink-0 mt-1" />
+                    <MapPin size={18} className="text-[#C15950] shrink-0 mt-1" />
                     <p className="font-light">Москва, Пресненская наб., 12<br/>Башня Федерация</p>
                   </div>
                 </div>
@@ -240,11 +240,11 @@ export default function Concept1() {
                    <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Связь</h4>
                    <div className="flex flex-col gap-4">
                      <a href="tel:+74950000000" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
-                        <Phone size={18} className="text-[#D4AF37]" />
+                        <Phone size={18} className="text-[#C15950]" />
                         <span>+7 (495) 000-00-00</span>
                      </a>
                      <a href="mailto:info@miraligal.ru" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
-                        <Mail size={18} className="text-[#D4AF37]" />
+                        <Mail size={18} className="text-[#C15950]" />
                         <span>info@miraligal.ru</span>
                      </a>
                    </div>

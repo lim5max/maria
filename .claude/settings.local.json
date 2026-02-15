@@ -3,7 +3,18 @@
     "allow": [
       "Bash(npx create-next-app@latest:*)",
       "Bash(npm init:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(VERCEL_ORG_ID=team_tRztrl4lJQCukpu1oAt26IEc npx vercel:*)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "Bash(npx vercel deploy:*)",
+      "Bash(powershell.exe -Command \"cd C:\\\\Users\\\\max\\\\Desktop\\\\maria; npx vercel deploy --yes --scope lim5maxs-projects 2>&1\")",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(npx next dev)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nImprove design across all 3 concepts: fluid typography, larger hero elements, refined services section\n\n- Concept 1: enhanced layout and visual hierarchy\n- Concept 2: added background image, improved services grid\n- Concept 3: fluid hero title with clamp\\(\\), bigger avatar with gold ring, gradient overlay, decorative \"25\" element, animated gold accent line, vertical column dividers in services\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
