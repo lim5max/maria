@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDownRight, Scale, Shield, Globe, TrendingUp, Users, FileText, Briefcase, Award, Copyright, Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowDownRight, Scale, Shield, Globe, TrendingUp, FileText, Award, Copyright, Menu, X, Phone } from 'lucide-react';
 
 const HandshakeIcon = () => (
   <svg
@@ -59,16 +59,14 @@ export default function Concept1() {
   };
 
   const services = [
-    { title: "Слияния и поглощения (М&A)", icon: <Users size={20} /> },
-    { title: "Купля-продажа бизнеса", icon: <Briefcase size={20} /> },
-    { title: "Инвестиционные сделки", icon: <TrendingUp size={20} /> },
-    { title: "Совместные предприятия (JV) и партнерства", icon: <HandshakeIcon /> },
-    { title: "Корпоративная практика и реструктуризации", icon: <FileText size={20} /> },
+    { title: "M&A · Купля-продажа бизнеса · Инвестиции", icon: <TrendingUp size={20} /> },
+    { title: "Совместные предприятия (JV)", icon: <HandshakeIcon /> },
+    { title: "Корпоративная практика", icon: <FileText size={20} /> },
     { title: "Венчурные проекты", icon: <Award size={20} /> },
     { title: "Международные сделки", icon: <Globe size={20} /> },
     { title: "Коммерческая практика", icon: <Scale size={20} /> },
     { title: "Личное благосостояние", icon: <Shield size={20} /> },
-    { title: "Интеллектуальная собственность (IP)", icon: <Copyright size={20} /> },
+    { title: "Интеллектуальная собственность", icon: <Copyright size={20} /> },
   ];
 
   return (
@@ -189,13 +187,39 @@ export default function Concept1() {
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
-              src="/maria.jpg"
+              src="/maria.png"
               alt="Мария Мирошникова"
               className="w-full h-full object-cover"
             />
 
             <div className="absolute bottom-0 right-0 p-8 z-20 bg-[#0a0a0a] border-t border-l border-[#222]">
               <ArrowDownRight className="text-[#C15950]" size={32} />
+            </div>
+          </div>
+        </section>
+
+        {/* --- STATS --- */}
+        <section className="relative bg-[#0a0a0a]">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
+            <div className="hidden lg:block col-span-1 border-r border-[#222]"></div>
+            <div className="col-span-11 grid grid-cols-1 md:grid-cols-3">
+              {[
+                { value: "25+", label: "Лет опыта" },
+                { value: "80+", label: "Проектов" },
+                { value: "$100M+", label: "Объём сделок" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className="p-10 lg:p-14 border-b border-r border-[#222] flex flex-col gap-3"
+                >
+                  <span className="font-serif-custom text-4xl lg:text-5xl text-white font-light">{stat.value}</span>
+                  <span className="font-sans-custom text-[10px] tracking-[0.3em] text-[#C15950] uppercase">{stat.label}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -224,39 +248,40 @@ export default function Concept1() {
           </div>
 
           {/* Footer / Contacts */}
-          <footer id="footer" className="grid grid-cols-1 lg:grid-cols-12 border-t border-[#222] bg-[#0a0a0a]">
-             <div className="hidden lg:block col-span-1 border-r border-[#222]"></div>
+          <footer id="footer" className="border-t border-[#222] bg-[#0a0a0a]">
+            <div className="grid grid-cols-1 lg:grid-cols-12">
+              <div className="hidden lg:block col-span-1 border-r border-[#222]"></div>
 
-             <div className="col-span-11 grid grid-cols-1 md:grid-cols-3">
-                <div className="p-10 border-b md:border-b-0 md:border-r border-[#222]">
-                  <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Адрес</h4>
-                  <div className="flex gap-4 items-start text-stone-300">
-                    <MapPin size={18} className="text-[#C15950] shrink-0 mt-1" />
-                    <p className="font-light">Москва, Пресненская наб., 12<br/>Башня Федерация</p>
+              <div className="col-span-11 p-10 lg:p-14 flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+                {/* Contact */}
+                <div className="flex flex-col gap-6">
+                  <div>
+                    <h4 className="font-serif-custom text-2xl text-white font-light mb-1">Мария Мирошникова</h4>
+                    <p className="font-sans-custom text-xs text-stone-500 tracking-wider uppercase">Партнер, адвокат, к.ю.н.</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                    <a href="tel:+79031490249" className="group flex gap-3 items-center text-stone-300 hover:text-white transition-colors duration-300">
+                      <Phone size={15} className="text-[#C15950]" />
+                      <span className="text-sm">+7 (903) 149-02-49</span>
+                    </a>
+                    <a href="https://t.me/miroshnikova_maria" target="_blank" rel="noopener noreferrer" className="group flex gap-3 items-center text-stone-300 hover:text-white transition-colors duration-300">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-[#C15950]">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                      </svg>
+                      <span className="text-sm">@miroshnikova_maria</span>
+                    </a>
                   </div>
                 </div>
 
-                <div className="p-10 border-b md:border-b-0 md:border-r border-[#222]">
-                   <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Связь</h4>
-                   <div className="flex flex-col gap-4">
-                     <a href="tel:+74950000000" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
-                        <Phone size={18} className="text-[#C15950]" />
-                        <span>+7 (495) 000-00-00</span>
-                     </a>
-                     <a href="mailto:info@miraligal.ru" className="flex gap-4 items-center text-stone-300 hover:text-white transition-colors">
-                        <Mail size={18} className="text-[#C15950]" />
-                        <span>info@miraligal.ru</span>
-                     </a>
-                   </div>
+                {/* Brand + Copyright */}
+                <div className="flex flex-col items-start md:items-end gap-3">
+                  <span className="font-sans-custom text-[10px] tracking-[0.3em] text-[#C15950] uppercase">Miraligal</span>
+                  <p className="font-sans-custom text-[10px] text-stone-600 uppercase tracking-widest">
+                    &copy; {new Date().getFullYear()} All rights reserved.
+                  </p>
                 </div>
-
-                <div className="p-10 flex flex-col justify-between">
-                   <h4 className="text-stone-500 text-xs uppercase tracking-widest mb-6">Miraligal</h4>
-                   <p className="font-sans-custom text-[10px] text-stone-600 uppercase tracking-widest">
-                     &copy; {new Date().getFullYear()} All rights reserved.
-                   </p>
-                </div>
-             </div>
+              </div>
+            </div>
           </footer>
         </section>
 
