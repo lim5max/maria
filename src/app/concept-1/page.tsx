@@ -657,7 +657,7 @@ export default function Concept1() {
         <section id="services" className="relative bg-[#0f0f0f]">
           <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-white/10">
             <div className="hidden lg:block col-span-1 border-r border-white/10"></div>
-            <div className="col-span-11 px-6 py-6 lg:px-12 lg:py-7 flex flex-col lg:flex-row lg:items-center justify-between">
+            <div className="col-span-11 px-6 py-6 lg:px-8 lg:py-7 flex flex-col lg:flex-row lg:items-center justify-between">
                <h3 className="font-serif-custom text-2xl sm:text-3xl lg:text-[2.65rem] text-white font-normal leading-tight">
                   {tr("Области практики", "Practice Areas")}
                 </h3>
@@ -698,7 +698,7 @@ export default function Concept1() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-white/10">
               <div className="hidden lg:block col-span-1 border-r border-white/10"></div>
-              <div className="relative col-span-11 px-6 py-6 lg:px-12 lg:py-7">
+              <div className="relative col-span-11 px-6 py-6 lg:px-8 lg:py-7">
                 <div className="flex items-center justify-between gap-6">
                   <h3 className="font-serif-custom text-2xl sm:text-3xl lg:text-[2.65rem] text-white font-normal leading-tight">
                     {tr("Профессиональные рейтинги", "Professional Rankings")}
