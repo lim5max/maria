@@ -15,7 +15,12 @@
       "Bash(npx next dev)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nImprove design across all 3 concepts: fluid typography, larger hero elements, refined services section\n\n- Concept 1: enhanced layout and visual hierarchy\n- Concept 2: added background image, improved services grid\n- Concept 3: fluid hero title with clamp\\(\\), bigger avatar with gold ring, gradient overlay, decorative \"25\" element, animated gold accent line, vertical column dividers in services\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(pip show:*)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)"
     ]
   }
 }

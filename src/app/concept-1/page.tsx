@@ -276,41 +276,173 @@ export default function Concept1() {
       title: "M&A · Business Acquisitions & Sales · Investments",
       description:
         "I support corporate and investment transactions end-to-end: from structuring and preliminary documents to closing and post-deal integration",
+      bullets: [
+        "Buying and selling businesses and assets in Russia and abroad, M&A and direct investment transactions",
+        "Deal structuring with consideration of corporate, antitrust, tax, sanctions, and other regulatory aspects",
+        "Legal due diligence, negotiation of transaction documents, and deal negotiations support",
+        "Drafting transaction documents: term sheets, LOIs, SHAs, options, indemnities, representations and warranties, disclosure letters",
+        "Support for financing transactions and security documentation: loans, assignment/transfer of debt, guarantees, pledges, escrow, and letters of credit",
+      ],
+      cases: [
+        "Advised on the consolidation of assets to create a major non-ferrous metals producer",
+        "Advised on the consolidation of industrial assets in coal mining and processing",
+        "Helped a foreign investor acquire a controlling stake in a Class A office property owner in Moscow",
+        "Helped a founder sell a 50% stake in a chemical raw materials plant to a strategic investor",
+        "Helped an investment holding gradually sell stakes in port infrastructure operators in Russia",
+        "Helped a majority shareholder gradually sell a stake in an auto components business with debt financing",
+        "Helped a founder gradually sell a healthcare business to a venture investor",
+        "Helped an investor sell a company holding a mineral deposit development license in Irkutsk region",
+        "Helped investors acquire assets in agribusiness, gas production, fishing, and commercial real estate",
+      ],
     },
     {
       title: "Joint Ventures (JV)",
       description:
         "I help create, restructure, and develop joint ventures, partnerships, and consortium projects, including those with foreign participants",
+      bullets: [
+        "Designing the legal structure for participation in joint projects and corporate governance models",
+        "Negotiating cooperation terms and decision-making mechanisms between participants",
+        "Drafting key documents: framework agreements, SHAs, corporate agreements, partnership agreements, options",
+        "Drafting ancillary documents: key commercial contracts, IP agreements, and other arrangements",
+        "Resolving deadlock and crisis situations, amending cooperation terms, and managing partner exits",
+      ],
+      cases: [
+        "Helped establish a JV between a foreign investor and a regional partner for battery manufacturing",
+        "Advised on the creation of a JV between a Finnish shipbuilding company and a Russian corporation for marine engine production",
+        "Helped private Russian and foreign investors establish a partnership for commodity trading abroad",
+        "Helped Russian and foreign investors establish a JV for construction and management of a shopping center abroad",
+        "Helped Russian and foreign investors structure a project for developing a workwear dry-cleaning business abroad",
+        "Helped Russian and Japanese partners formalize a joint project for crystal oscillator manufacturing",
+        "Advised on creating a partnership between a Russian investor and a development institution for timber processing and pulp mill construction",
+      ],
     },
     {
       title: "Corporate Practice & Restructuring",
       description:
         "I advise on corporate law, governance, and complex multi-stage corporate restructurings",
+      bullets: [
+        "Corporate restructurings and reorganizations, including de-offshorization and redomiciliation",
+        "Designing optimal asset ownership structures and investment project participation",
+        "Developing corporate governance structures and drafting internal documents (regulations, policies, etc.)",
+        "Drafting management company agreements for transfer of sole executive body functions",
+        "Advising on directors' and officers' liability",
+      ],
+      cases: [
+        "Helped a Russian investment group complete a multi-stage, multi-jurisdictional restructuring in connection with asset de-offshorization",
+        "Advised on redomiciliation and negotiation of new shareholder agreements as part of group transformation",
+        "Helped a transport and logistics group restructure by converting the holding company from an LLC to a joint-stock company",
+        "Advised the largest shareholder of a non-ferrous metals producer on corporate restructuring and debt obligations",
+        "Helped a petrochemical company complete a multi-step restructuring in preparation for selling shares to a strategic investor and investment fund",
+        "Advised on the restructuring of a vertically integrated mining holding",
+        "Helped a bank restructure obligations of a mining holding with partial debt-to-equity conversion in a deposit development project",
+      ],
     },
     {
       title: "Venture Projects",
       description:
         "I support founders in raising venture capital and investors in structuring and closing investments at every stage",
+      bullets: [
+        "Pre-investment legal due diligence and capital raising deal structuring",
+        "Drafting and negotiating documents: subscription agreements, shareholder agreements, option mechanisms",
+        "Working with hybrid instruments: convertible loans, CLAs, SAFE, KISS",
+        "Structuring investor corporate rights and exit strategies",
+      ],
+      cases: [
+        "Helped investors structure entry into a biotech startup focused on genetic research",
+        "Advised on investment in an early disease diagnostics startup based on blood analysis",
+        "Advised on a deal in a medical insurtech project for corporate healthcare based on voluntary health insurance",
+        "Advised on investment in an online farm produce marketplace startup",
+        "Advised on investment in a foodtech meal kit delivery service project",
+      ],
     },
     {
       title: "Cross-Border Transactions",
       description:
         "I handle international deals in English, including asset acquisitions/disposals, investments, and JV structuring",
+      bullets: [
+        "Managing transactions in Russia and abroad with engagement of local counsel in foreign jurisdictions",
+        "Structuring investments and transactions for acquisition/disposal of shares, interests, and assets",
+        "Drafting and negotiating English-language documentation and coordinating multi-jurisdictional teams",
+        "Supporting joint ventures and cross-border projects in the CIS, UAE, UK, and other jurisdictions",
+      ],
+      cases: [
+        "Helped an investment holding acquire a 25% stake in an international drilling company operating in CIS countries",
+        "Helped a Russian investor invest in a UK-based fintech solutions company",
+        "Helped a Russian investor acquire a stake in a UAE-based JV developing software for the auto industry",
+        "Advised on the buyout of a minority stake from a foreign shareholder of a telecommunications company",
+        "Advised on the sale of a stake in a petrochemical company to a Chinese strategic investor and investment fund",
+        "Helped a foreign investor acquire a data center services business in Moscow",
+        "Helped a Russian investor establish a JV for petroleum logistics in a CIS country",
+        "Helped structure a JV with a foreign partner for developing a winemaking business in Russia and abroad",
+      ],
     },
     {
       title: "Commercial Contracts",
       description:
         "I draft, negotiate, and audit commercial contracts both as stand-alone mandates and within larger transactions",
+      bullets: [
+        "Lease, supply, services, construction, distribution, and franchise agreements",
+        "Agency, merchandising, licensing, and know-how transfer agreements",
+        "Drafting and negotiating complex industry contracts, including take-or-pay arrangements and structures with international operators",
+        "Contract audit for compliance with legislation and market best practices",
+      ],
+      cases: [
+        "Drafted supply agreements for auto components, marine vessel components, and FMCG goods for foreign suppliers",
+        "Prepared distribution, agency, and merchandising services agreements",
+        "Drafted petroleum supply agreements, including take-or-pay models",
+        "Prepared franchise, licensing, know-how transfer, and escrow agent services agreements",
+        "Advised on a business center management agreement in Russia with an international-class operator",
+        "Advised on a hotel management agreement abroad with an international operator",
+        "Prepared purchase and sale agreements for new and pre-owned aircraft and agreements with a commercial aircraft operator",
+        "Advised on vessel purchase and sale agreements and related commercial arrangements",
+      ],
     },
     {
       title: "Private Wealth",
       description:
         "I advise business owners and beneficiaries on private wealth, asset structuring, and family arrangements in Russia and abroad",
+      bullets: [
+        "Structuring ownership and management of personal and business assets",
+        "Estate planning and structuring asset transfers to family members",
+        "Trusts, private foundations, prenuptial agreements, and property division arrangements",
+        "Coordinating structures with tax advisors in Russia and local counsel abroad",
+      ],
+      cases: [
+        "Helped a client engage an international operator to manage high-value private-use real estate",
+        "Advised on the drafting and execution of a hotel management agreement abroad with an international operator",
+        "Helped a client purchase several new business jets from a foreign manufacturer",
+        "Helped a client buy and sell a pre-owned business jet",
+        "Advised on the drafting and execution of an agreement with a commercial aircraft operator",
+        "Helped clients sell residential and commercial property (apartments, country houses, office spaces)",
+        "Helped a client draft and execute a prenuptial agreement",
+      ],
     },
     {
       title: "Intellectual Property (IP)",
       description:
         "I advise on IP-driven deals, IP due diligence, and legal frameworks for commercialization and rights protection",
+      bullets: [
+        "Designing legal frameworks for commercialization of software developments",
+        "Drafting all necessary documents: license agreements, lease agreements, remote software access agreements, SLAs, and other arrangements",
+        "Preparing documents for effective legal protection of know-how and subsequent rights transfer",
+        "Developing legal models for brand, goods, and services promotion in compliance with IP and advertising law",
+        "Drafting franchise agreements and documents for promotion through social media, platforms, messengers, and other digital channels",
+        "Formalizing and managing rights to creative content: live streams, video recordings, webinars, photo and video publications",
+      ],
+      cases: [
+        "Helped a leading Scandinavian IT company acquire a data center services business in Moscow from Russian founders",
+        "Helped an owner sell a sports club in a Scandinavian country",
+        "Developed a franchise agreement and document package for a medical company to expand a network of medical offices under a franchise model",
+        "Defended a licensee's rights in court against a penalty claim by the rights holder: the court dismissed the claim in full",
+        "Advised a Russian industrial holding on intra-group restructuring of invention and utility model rights, including license transfers",
+        "Advised a major Russian software developer on trademark registration and renewal in Russia and the US, software licensing to foreign clients, and source code escrow",
+        "Helped a documentary film studio formalize film rights, execute agreements with the creative team, and obtain government financial support",
+        "Helped a private feature film studio formalize film rights and agreements with film authors and contributors",
+        "Helped a software producer challenge a trademark registration refusal before the Patent Dispute Chamber of Rospatent",
+        "Advised a construction materials manufacturer on color trademark protection",
+        "Helped an investor participate in an international investment and architectural competition for territory development rights through to the signing of an investment agreement",
+        "Helped an investment holding acquire 100% of one of the largest design and research organizations in infrastructure construction",
+      ],
     },
   ];
 
@@ -319,6 +451,8 @@ export default function Concept1() {
         ...item,
         title: servicesEnMeta[index]?.title ?? item.title,
         description: servicesEnMeta[index]?.description ?? item.description,
+        bullets: servicesEnMeta[index]?.bullets ?? item.bullets,
+        cases: servicesEnMeta[index]?.cases ?? item.cases,
       }))
     : servicesRu;
 
