@@ -211,7 +211,7 @@ export default function Concept3() {
           </div>
         </div>
         <div className="max-w-screen-xl mx-auto px-6 md:px-12 mt-10 pt-6 border-t border-white/5 flex justify-between text-[10px] text-white/15 uppercase tracking-widest">
-          <span>&copy; {new Date().getFullYear()} Miralegal</span>
+          <span>&copy; {new Date().getFullYear()} Миралигал</span>
           <span>Privacy Policy</span>
         </div>
       </footer>

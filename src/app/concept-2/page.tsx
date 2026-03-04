@@ -164,7 +164,7 @@ export default function Concept2() {
       <footer id="footer" className="bg-[#121212] text-white py-16 px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto flex flex-col gap-8 md:flex-row md:justify-between md:items-end">
           <div>
-            <img src="/logo.svg" alt="Miralegal" className="h-5 mb-2 brightness-0 invert" />
+            <img src="/logo.svg" alt="Миралигал" className="h-5 mb-2 brightness-0 invert" />
             <p className="text-[#8c8c8c] text-xs max-w-xs leading-relaxed">Эксклюзивная юридическая практика для бизнеса и частных лиц.</p>
           </div>
           <div className="flex flex-col md:items-end gap-2">
@@ -173,7 +173,7 @@ export default function Concept2() {
           </div>
         </div>
         <div className="max-w-screen-2xl mx-auto mt-12 pt-8 border-t border-white/10 flex justify-between text-[10px] text-[#8c8c8c] uppercase tracking-widest">
-          <span>&copy; {new Date().getFullYear()} Miralegal</span>
+          <span>&copy; {new Date().getFullYear()} Миралигал</span>
           <span>Privacy Policy</span>
         </div>
       </footer>
