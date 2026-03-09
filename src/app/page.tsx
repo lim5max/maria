@@ -795,7 +795,7 @@ export default function Concept1() {
         </section>
 
         {/* --- BLOCK 2: SERVICES --- */}
-        <section id="services" className="relative bg-[#0f0f0f] scroll-mt-[80px]">
+        <section id="services" className="relative bg-[#0f0f0f] scroll-mt-[73px] lg:scroll-mt-0">
           <div className="grid grid-cols-1 lg:grid-cols-12 border-b border-white/10">
             <div className="hidden lg:block col-span-1 border-r border-white/10"></div>
             <div className="col-span-11 px-6 py-6 lg:px-8 lg:py-7 flex flex-col lg:flex-row lg:items-center justify-between">
@@ -882,7 +882,7 @@ export default function Concept1() {
           </section>
 
           {/* --- ABOUT ME FINAL BLOCK --- */}
-          <section id="about" className="relative border-t border-white/10 bg-[#090909] overflow-hidden scroll-mt-[80px]">
+          <section id="about" className="relative border-t border-white/10 bg-[#090909] overflow-hidden scroll-mt-[73px] lg:scroll-mt-0">
             <div className="pointer-events-none absolute inset-0">
               <div className="absolute -top-16 left-1/4 h-56 w-56 rounded-full bg-[#C15950]/10 blur-3xl"></div>
               <div className="absolute -bottom-20 right-20 h-64 w-64 rounded-full bg-[#7f3a34]/10 blur-3xl"></div>
